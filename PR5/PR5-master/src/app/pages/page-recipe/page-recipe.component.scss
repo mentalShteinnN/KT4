@@ -1,0 +1,153 @@
+.go_back {
+    margin: 30px 0 30px 70px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.recipe {
+    padding: 10px 20px 40px;
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    border: 9px solid var(--white);
+    border-top: 5px solid var(--white);
+    border-bottom: 5px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    width: fit-content;
+
+    &>.title {
+        font-family: 'Arima';
+        color: var(--black);
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 39px;
+    }
+
+    &>.main_block {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        width: fit-content;
+        height: 100%;
+
+        &>.info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-height: 320px;
+            width: fit-content;
+
+            &>.info_title {
+                font-family: 'Arima';
+                color: var(--gray);
+                font-size: 20px;
+                line-height: 32px;
+                font-weight: 500;
+            }
+
+            // &>.ingredients {
+            //     // width: 370px;
+            //     height: 130px;
+            //     // box-sizing: border-box;
+            //     // width: fit-content;
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     gap: 15px;
+            //     width: auto;
+
+            //     &>.ingredient {
+            //         border-radius: 7px;
+            //         padding: 5px 9px;
+            //         border: 1px solid var(--white);
+            //         border-left: 2px solid var(--white);
+            //         border-right: 2px solid var(--white);
+            //     }
+            // }
+            &>.ingredients {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                height: 130px;
+                overflow-y: scroll;
+                width: 350px;
+
+                &>.ingredient {
+                    border-radius: 7px;
+                    padding: 5px 9px;
+                    border: 1px solid var(--white);
+                    border-left: 4px solid var(--white);
+                    border-right: 4px solid var(--white);
+                }
+            }
+
+            &>.informations_title {
+                margin-top: auto;
+            }
+
+            &>.informations {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                &>.information {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 7px 12px;
+                    gap: 25px;
+                    max-width: 90px;
+                    border: 1px solid var(--white);
+                    border-radius: 7px;
+
+                    &>.info {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: black;
+                    }
+
+                    &>.text {
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: var(--gray);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &>.main_image {
+            width: 319px;
+            height: 319px;
+            border: 9px solid var(--white);
+            border-radius: 7%;
+        }
+    }
+
+    button {
+        background-color: var(--blue);
+        border-radius: 5px;
+        padding: 8px 50px;
+        color: var(--white);
+        font-size: 8px;
+        line-height: 9px;
+        font-weight: 500;
+        width: fit-content;
+        border: none;
+
+        &:hover {
+            filter: grayscale(30%)
+        }
+    }
+}

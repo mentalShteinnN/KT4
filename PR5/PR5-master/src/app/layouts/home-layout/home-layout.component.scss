@@ -1,0 +1,71 @@
+main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--light-blue);
+
+    h1 {
+        font-family: 'Arima';
+        font-size: 44px;
+        line-height: 72px;
+        font-weight: 800;
+        padding-left: 30px;
+        padding-top: 15px;
+    }
+
+    &>.more_recipes {
+        margin: 35px 0;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+
+        &>.more_recipes_title {
+            font-family: 'Arima';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 39px;
+            width: 100%;
+        }
+
+        .more_recipe {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: end;
+            position: relative;
+            border: 2px solid var(--white);
+            border-radius: 7px;
+            height: 140px;
+            width: 160px;
+            margin-bottom: auto;
+            padding: 10px;
+
+            img {
+                width: 95px;
+                height: 95px;
+                border-radius: 25px;
+                // position: absolute;
+                // top: -30px;
+                border: 3px solid var(--white);
+            }
+
+            &>.title {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+            }
+
+            &>.time {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 15px;
+                color: var(--gray);
+                text-align: center;
+            }
+        }
+    }
+}

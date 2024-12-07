@@ -1,0 +1,43 @@
+<!-- <ul>
+    <li><a [routerLink]="'/' + time + '/all'">All</a></li>
+    <li><a [routerLink]="'/' + time + '/easy'">Easy</a></li>
+    <li><a [routerLink]="'/' + time + '/medium'">Medium</a></li>
+</ul>
+<ul>
+    <li><a [routerLink]="'/dinner/' + level">Dinner</a></li>
+    <li><a [routerLink]="'/lunch/' + level">Lunch</a></li>
+    <li><a [routerLink]="'/breakfast/' + level">Breakfast</a></li>
+</ul>
+<hr>
+<p>{{time}} - {{level}}</p> -->
+<section>
+    <ul class="nav nav-horizontal">
+        <li><a [class]="recipes.level === 'all' ? 'active' : ''" [routerLink]="'/' + recipes.time + '/all'">All</a></li>
+        <li><a [class]="recipes.level === 'easy' ? 'active' : ''" [routerLink]="'/' + recipes.time + '/easy'">Easy</a>
+        </li>
+        <li><a [class]="recipes.level === 'medium' ? 'active' : ''"
+                [routerLink]="'/' + recipes.time + '/medium'">Medium</a></li>
+    </ul>
+    <div>
+        <ul class="nav nav-vertical">
+            <li><a [class]="recipes.time === 'dinner' ? 'active' : ''"
+                    [routerLink]="'/dinner/' + recipes.level">Dinner</a>
+                @if (recipes.time === 'dinner') {
+                <span class="dot"></span>
+                }
+            </li>
+            <li><a [class]="recipes.time === 'lunch' ? 'active' : ''" [routerLink]="'/lunch/' + recipes.level">Lunch</a>
+                @if (recipes.time === 'lunch') {
+                <span class="dot"></span>
+                }
+            </li>
+            <li><a [class]="recipes.time === 'breakfast' ? 'active' : ''"
+                    [routerLink]="'/breakfast/' + recipes.level">Breakfast</a>
+                @if (recipes.time === 'breakfast') {
+                <span class="dot"></span>
+                }
+            </li>
+        </ul>
+        <app-recipe-list />
+    </div>
+</section>

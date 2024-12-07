@@ -1,0 +1,17 @@
+<main>
+    <h1>Recipies</h1>
+    <router-outlet />
+    <div class="more_recipes">
+        <p class="more_recipes_title">More recipies</p>
+        @for(recipe of recipes.getUnVisitedRecipes().slice(0, 5); track $index ){
+        <!-- <p>{{recipe.name}}</p> -->
+        <a [routerLink]="'/recipe/' + recipe.id">
+            <div class="more_recipe">
+                <img [src]="recipe.image" alt="">
+                <p class="title">{{recipe.name}}</p>
+                <p class="time">{{recipe.cookTimeMinutes}} min cooktime</p>
+            </div>
+        </a>
+        }
+    </div>
+</main>

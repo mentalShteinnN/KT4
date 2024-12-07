@@ -1,0 +1,36 @@
+<p class="go_back" (click)="location.back()">⬅️ Go back</p>
+@if(recipes.selectedRecipe){
+<div class="recipe">
+    <p class="title">{{recipes.selectedRecipe.name}}</p>
+    <div class="main_block">
+        <div class="info">
+            <p class="info_title">Instructions</p>
+            <div class="ingredients">
+                @for(instruction of recipes.selectedRecipe.instructions; track $index ){
+                <p class="ingredient">{{instruction}}</p>
+                }
+            </div>
+            <p class="info_title informations_title">Information</p>
+            <div class="informations">
+                <div class="information">
+                    <p class="info">{{recipes.selectedRecipe.caloriesPerServing}}</p>
+                    <p class="text">Calories</p>
+                </div>
+                <div class="information">
+                    <p class="info">{{recipes.selectedRecipe.rating}}</p>
+                    <p class="text">Rating</p>
+                </div>
+                <div class="information">
+                    <p class="info">{{recipes.selectedRecipe.prepTimeMinutes}}</p>
+                    <p class="text">Prep time minutes</p>
+                </div>
+                <div class="information">
+                    <p class="info">{{recipes.selectedRecipe.cookTimeMinutes}}</p>
+                    <p class="text">Cook time minutes</p>
+                </div>
+            </div>
+        </div>
+        <img class="main_image" [src]="recipes.selectedRecipe.image" alt="">
+    </div>
+</div>
+}

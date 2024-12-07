@@ -1,0 +1,42 @@
+<div class="recipes">
+    <!-- <p>main</p>
+    @for(recipe of recipes.mainRecipes; track $index ){
+    <p>{{recipe.name}}</p>
+    } -->
+    @for(recipe of recipes.mainRecipes; track $index ){
+    <div class="recipe">
+        <p class="title">{{recipe.name}}</p>
+        <div class="main_block">
+            <div class="info">
+                <p class="info_title">Ingridients</p>
+                <div class="ingredients">
+                    @for(ingredient of recipe.ingredients; track $index ){
+                    <p class="ingredient">{{ingredient}}</p>
+                    }
+                </div>
+                <p class="info_title informations_title">Information</p>
+                <div class="informations">
+                    <div class="information">
+                        <p class="info">{{recipe.caloriesPerServing}}</p>
+                        <p class="text">Calories</p>
+                    </div>
+                    <div class="information">
+                        <p class="info">{{recipe.rating}}</p>
+                        <p class="text">Rating</p>
+                    </div>
+                    <div class="information">
+                        <p class="info">{{recipe.prepTimeMinutes}}</p>
+                        <p class="text">Prep time minutes</p>
+                    </div>
+                    <div class="information">
+                        <p class="info">{{recipe.cookTimeMinutes}}</p>
+                        <p class="text">Cook time minutes</p>
+                    </div>
+                </div>
+            </div>
+            <img class="main_image" [src]="recipe.image" alt="">
+        </div>
+        <a [routerLink]="'/recipe/' + recipe.id"><button>Recipe</button></a>
+    </div>
+    }
+</div>
